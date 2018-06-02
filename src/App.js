@@ -4,7 +4,7 @@ import HomePage from "./components/pages/HomePage";
 import ExpPage from "./components/pages/ExpPage.js";
 
 const App = () => (
-	<div>
+	<div className = "ui container">
 		<Route path="/" exact component={HomePage} />
 		<Route path="/experience" exact component={ExpPage} />
 	</div>
