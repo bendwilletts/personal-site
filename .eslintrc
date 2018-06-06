@@ -17,6 +17,14 @@
     "browser": true,
     "node": true
   },
+  "settings": {
+    "import/parser": "babel-eslint",
+    "import/resolver": {
+        "webpack": {
+            "config": "webpack.config.js"
+        }
+    }
+  },
   "rules": {
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
   }

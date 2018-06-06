@@ -1,0 +1,46 @@
+.intro-msg{
+	position: absolute;
+	font-size: 1.8vw;
+    margin: 0;
+    font-family: "Courier New";
+  	top: 42%;
+  	left: 2%;
+  	line-height: 1.2;
+}
+@media screen and (min-width: 1500px) {
+  .intro-msg {
+	position: absolute;
+	font-size: 28px;
+	margin: 0;
+	font-family: "Courier New";
+	top: 42%;
+	left: 2%;
+	line-height: 1.2;
+  }
+}
+.home-img{
+	position: relative;
+}
+.home-segment{
+	overflow: hidden !important;
+	padding: 0px !important;
+}
+.var-highlight{
+    color: #C0AD60;
+}
+.string-highlight{
+    color: rgba(253, 149, 90, 0.8);
+}
+
+.footer{
+	margin-top: 1rem;
+}
+
+.copyright{
+	float:right;
+	opacity:0.5;
+	font-size:11px;
+}
+.portfolio-header{
+	margin-bottom: 1.5rem !important;
+}
