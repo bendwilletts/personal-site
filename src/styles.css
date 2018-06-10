@@ -34,6 +34,7 @@
 
 .footer{
 	margin-top: 1rem;
+	margin-bottom: 1rem;
 }
 
 .copyright{
@@ -43,4 +44,10 @@
 }
 .portfolio-header{
 	margin-bottom: 1.5rem !important;
+}
+.card-desc{
+	margin-top:10px !important;
+}
+.card-img{
+	height:15rem !important;
 }
