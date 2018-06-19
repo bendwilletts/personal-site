@@ -51,3 +51,6 @@
 .card-img{
 	height:15rem !important;
 }
+.modal-card{
+	display: flex !important;
+}
