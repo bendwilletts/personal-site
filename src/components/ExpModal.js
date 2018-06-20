@@ -1,50 +1,53 @@
 import React, {Component} from 'react';
-import {Card, Image, Icon, Header, Divider, Modal, Button} from 'semantic-ui-react';
+import {Image, Icon, Header, Modal, Button} from 'semantic-ui-react';
 
 export default class ExpModal extends Component {
 	constructor(props){
 		super(props);
-		this.cardOnClick = this.cardOnClick.bind(this);
 		this.state = {
-			modalTitle:'',
-			modalSubTitle:'',
-			modalSummary:'',
-			modalImgPath: '',
-			modalNum:0,
+			// modalTitle:'',
+			// modalSubTitle:'',
+			// modalSummary:'',
+			// modalImgPath: '',
+			// modalNum:0,
 			modalOpen:false
 		};
 	}
-	componentDidMount() {
-	    this.props.onRef(this);
-	}
-	componentWillUnmount() {
-		this.props.onRef(undefined);
-	}
+	// cardOnClick(title, role, image, num) {
+	// 	this.setState({
+	// 		modalTitle: title,
+	// 		modalSubTitle: role,
+	// 		modalImgPath: image,
+	// 		modalNum: num,
+	// 		modalOpen: true
+	// 	});
+	// }	
 
-	cardOnClick(title, role, image, num) {
-		this.setState({
-			modalTitle: title,
-			modalSubTitle: role,
-			modalImgPath: image,
-			modalNum: num,
-			modalOpen: true
-		});
-	}
+	// handleClose = () => this.setState({ modalOpen: false });
 
-	handleClose = () => this.setState({ modalOpen: false });
+	// handleOpen = () => this.setState({modalOpen: true});
 
 	render() {
 		return(
-			<Modal open={this.state.modalOpen} onClose={this.handleClose()}>
-			    <Modal.Header>Select a Photo</Modal.Header>
+			<Modal open={this.props.modalClick} onClose={this.props.handleClose} className='modal-container'>
+			    <Modal.Header>{this.props.modalTitle}</Modal.Header>
 				<Modal.Content image>
-				  <Image wrapped size='medium' src='/assets/images/avatar/large/rachel.png' />
-				  <Modal.Description>
-				    <Header>Default Profile Image</Header>
-				    <p>We've found the following gravatar image associated with your e-mail address.</p>
-				    <p>Is it okay to use this photo?</p>
+				  <Image wrapped size='medium' src={this.props.modalImgPath} />
+				  <Modal.Description className='modal-desc'>
+				    <Header>{this.props.modalSubTitle}</Header>
+				    <p>{this.props.modalSummary}</p>
 				  </Modal.Description>
 				</Modal.Content>	
+				<Modal.Actions>
+					<a target='_blank' href={this.props.modalLink}>
+					<Button secondary>
+						More Info
+					</Button>
+					</a>
+					<Button onClick={this.props.handleClose}>
+						Back<Icon name='right chevron' />
+					</Button>
+				</Modal.Actions>
 			</Modal>
 			);
 	}
