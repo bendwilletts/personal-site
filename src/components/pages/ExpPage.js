@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Card, Image, Icon, Header, Divider, Modal, Button} from 'semantic-ui-react';
+import {Card, Image, Icon, Header, Divider, Label} from 'semantic-ui-react';
 import {Carousel} from 'antd';
 import ExpModal from '../ExpModal.js';
 
@@ -161,7 +161,7 @@ export default class ExpPage extends Component {
 
 		return(
 			<div>
-				<Header as='h2' icon textAlign='center' className='portfolio-header'>
+{/*				<Header as='h2' icon textAlign='center' className='portfolio-header'>
 				<Divider horizontal>
 		  			<Icon name='comment alternate' circular />
 		  			<Header.Content>Endorsements</Header.Content>
@@ -173,7 +173,7 @@ export default class ExpPage extends Component {
 				    <div><h3>3</h3></div>
 				    <div><h3>4</h3></div>
             	</Carousel>
-				<Header as='h2' icon textAlign='center' className='portfolio-header'>
+*/}				<Header as='h2' icon textAlign='center' className='portfolio-header'>
 				<Divider horizontal>
 		  			<Icon name='briefcase' circular />
 		  			<Header.Content>Work Experience</Header.Content>
@@ -272,20 +272,71 @@ export default class ExpPage extends Component {
 		  			<Header.Content>Skills</Header.Content>
 		  		</Divider>
 				</Header>
-				<Card fluid>
-					<Image src='/assets/images/avatar/large/daniel.jpg' />
+				<Card.Group centered itemsPerRow={this.state.rowItems}>
+				<Card>
 					<Card.Content>
 						<Card.Header>Programming Languages</Card.Header>
-						<Card.Meta>TODO</Card.Meta>
-						<Card.Description>TODO</Card.Description>
+						<Divider/>
+						<Card.Description>
+							<Label.Group size='big'>
+								<Label>Javascript</Label>
+								<Label>Java</Label>
+								<Label>Python</Label>
+								<Label>HTML</Label>
+								<Label>CSS</Label>
+								<Label>SQL</Label>
+								<Label>C</Label>
+								<Label>Bash</Label>
+								<Label>PHP</Label>
+								<Label>OCaml</Label>
+								<Label>UNIX Shell Scripting</Label>
+							</Label.Group>						
+						</Card.Description>
 					</Card.Content>
-					<Card.Content extra>
-						<a>
-							<Icon name='user' />
-							10 Friends
-						</a>
+
+				</Card>
+				<Card>
+					<Card.Content>
+						<Card.Header>Software Tools</Card.Header>
+						<Divider/>
+						<Card.Description>
+							<Label.Group size = 'big'>
+								<Label>AngularJS</Label>
+								<Label>React</Label>
+								<Label>Node.js</Label>
+								<Label>Hibernate</Label>
+								<Label>Flask</Label>
+								<Label>Jersey</Label>
+								<Label>OpenCV</Label>
+								<Label>Scikit-learn</Label>
+								<Label>TensorFlow</Label>
+								<Label>Keras</Label>
+								<Label>PyTorch</Label>
+								<Label>Spark</Label>
+								<Label>Git</Label>
+								<Label>SVN</Label>
+								<Label>JIRA</Label>
+							</Label.Group>						
+						</Card.Description>
 					</Card.Content>
 				</Card>
+				<Card>
+					<Card.Content>
+						<Card.Header>Industry Knowledge</Card.Header>
+						<Divider/>
+						<Card.Description>
+							<Label.Group size = 'big'>
+								<Label>Full Stack Web Development</Label>
+								<Label>Agile Programming Methodology</Label>
+								<Label>Computer Vision</Label>
+								<Label>Applied Machine Learning</Label>
+								<Label>Natural Language Processing</Label>
+								<Label>Database Management</Label>
+							</Label.Group>						
+						</Card.Description>
+					</Card.Content>
+				</Card>				
+				</Card.Group>
 				<ExpModal modalTitle={this.state.modalTitle} modalSubTitle={this.state.modalSubTitle} modalSummary={this.state.modalSummary} modalImgPath={this.state.modalImgPath} modalClick={this.state.modalClick} handleClose={() =>this.handleClose()} modalLink={this.state.modalLink}/>
 				</div>
 		)

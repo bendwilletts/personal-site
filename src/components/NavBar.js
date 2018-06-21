@@ -22,7 +22,7 @@ export default class NavBar extends Component {
 	        <Menu.Item header className='logoImg'><Image src={logo} size='tiny'/></Menu.Item>
 	        <Menu.Item position='right' as={NavLink} exact to='/' name='home' active={activeItem === 'home'} onClick={(this.handleItemClick)} />
 	        <Menu.Item as={NavLink} to='/portfolio' name='portfolio' active={activeItem === 'portfolio'} onClick={this.handleItemClick} />
-	        <Menu.Item name='contact' active={activeItem === 'contact'} onClick={this.handleItemClick} />
+	        {/*<Menu.Item name='contact' active={activeItem === 'contact'} onClick={this.handleItemClick} />*/}
 	      </Menu>			
 		);
 	}
