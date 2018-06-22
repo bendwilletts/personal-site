@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Card, Image, Icon, Header, Divider, Label} from 'semantic-ui-react';
-import {Carousel} from 'antd';
+//import {Carousel} from 'antd';
 import ExpModal from '../ExpModal.js';
 
 export default class ExpPage extends Component {
