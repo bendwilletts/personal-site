@@ -55,7 +55,7 @@
 	display: flex !important;
 }
 .modal-container{
-	margin-top: 1rem !important;
+	margin: 1rem auto !important;
 	overflow: auto;
 }
 .modal-desc{
