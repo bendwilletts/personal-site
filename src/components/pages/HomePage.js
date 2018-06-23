@@ -13,7 +13,7 @@ export default class HomePage extends Component {
 			<div>
 				<Segment className='home-segment'>
 					<Image className = 'home-img' src={background} fluid/>
-					<Typing className = 'intro-msg' startDelay = {500} speed = {25}>
+					<Typing className = 'intro-msg' startDelay = {500} speed = {15}>
 						<span class="var-highlight">var</span> MyProfile = &#123;<br/><Typing.Delay ms={500} /> 
 						    &emsp;&emsp;name&#58; <Typing.Delay ms={200} /> <span class="string-highlight">'Ben Willetts'</span>,<br/><Typing.Delay ms={400} /> 
 						   	&emsp;&emsp;major&#58; <Typing.Delay ms={200} /> <span class="string-highlight">'Software Engineering'</span>,<br/><Typing.Delay ms={400} /> 
