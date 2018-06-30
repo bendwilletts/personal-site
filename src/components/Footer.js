@@ -27,12 +27,6 @@ export default class Footer extends Component {
 		          AngelList
 		        </Menu.Item>
 		        </a>
-		        <a href='https://www.facebook.com/bendwilletts' target="_blank">
-		        <Menu.Item name='facebook' onClick={this.handleItemClick}>
-		          <Icon name='facebook' />
-		          Facebook
-		        </Menu.Item>
-		        </a>
 		        <a href='mailto:ben.d.willetts@gmail.com?Subject=Website%20Contact' target="_top">
 		        <Menu.Item name='email' onClick={this.handleItemClick}>
 		          <Icon name='mail' />
