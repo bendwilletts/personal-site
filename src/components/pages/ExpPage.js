@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Card, Image, Icon, Header, Divider, Label} from 'semantic-ui-react';
-//import {Carousel} from 'antd';
+import {Carousel} from 'antd';
 import ExpModal from '../ExpModal.js';
 
 export default class ExpPage extends Component {
@@ -46,16 +46,14 @@ export default class ExpPage extends Component {
   	handleOpen(event, title, role, num, img, link){
 		let summary = '';
 		if(num === 1){
-			summary = (<div><p>I currently hold an integral role as part of the software development team at MCHI. The current focus is developing and deploying version 2.0 of a public health surveillance tool called PopHR. This web-based application uses existing epidemiological and public health knowledge and integrates multiple clinical data sources to provide a statistical view of the health of populations. The project currently covers the regions within Quebec, and is looking to expand nationwide within the next year. The main software tools include a heavy use of Javascript and jQuery for client-side and Jersey (Java) in combination with PostgreSQL for a RESTful architecture on the server-side.</p>
+			summary = (<div><p>I currently hold an integral role as part of the software development team at MCHI. The current focus is developing and deploying version 2.0 of a public health surveillance tool called PopHR. This web-based application uses existing epidemiological and public health knowledge and integrates multiple clinical data sources to provide a statistical view of the health of populations. The project currently covers the regions within Quebec, and is looking to expand nationwide within the next year. The main software tools include a heavy use of Javascript with jQuery and Polymer frameworks for the client-side and Jersey (Java) in combination with PostgreSQL for a RESTful architecture on the server-side.</p>
 				<p>My main role is to lead the development of new modules to further describe the given data. The first steps require constant communication with leading researchers in public health to draw up requirements and mock-ups. Implementation is made on the front-end with a focus of rendering html elements in Javascript code in order to maintain a dynamic interface. Back-end implementation requires adding the necessary queries to gather and compute the server data. My team and I present the new working views in bi-weekly scrum meetings, where I point out any changes in design choices and problems to work around. The team maintains an agile workflow with JIRA as the main tool for task management.</p>
 				<p>I am participating in a small but fulfilling team that provides me insights on all aspects of Full Stack Web Development. I am thoroughly enjoying the challenge of designing for a research tool meant to benefit society and the healthcare industry. The fast paced and coherent work environment is new and refreshing to me. I have gained a much broader knowledge of Javascript since I began, which I now realize is the most essential tool for modern websites. All the while garnering a deeper understanding of developing scalable server architectures for a large application.</p></div>)
 		}
 		else if(num === 2){
-			summary = (<div><p>- Acquired a solid understanding for enterprise software development</p>
-				<p>- Gathered valuable knowledge in web application design to create seamless user interfaces for company projects</p>
-				<p>- Applied object-oriented programming concepts to develop server-side framework</p>
-				<p>- Gained exposure with SQL database systems</p>
-				<p>- Experienced a team-based approach to agile development projects</p></div>)
+			summary = (<div><p>At Gammon Construction Limited, I worked as a summer trainee in the Information Management Services department. This department served as the software development division for the company. During my opportunity, the division focused on building enterprise applications to increase efficiency in the workplace and in their engineering projects. Our team of five engineers were tasked to create a workflow management web application to facilitate intercompany transactions. The main software tools include AngularJS 2 and jQuery frameworks for the front-end and Spring-booted Hibernate to serve as the back-end.</p>
+				<p>My role as a developer trainee was to help build the server architecture and lead the designs of multiple user interface components for the application. The company promoted an agile development format and held monthly scrum meetings with the rest of the IMS division. In order to ensure that the product worked to help all departments within the company, I was tasked to communicate ideas and consider feedback from engineering and finance experts. These discussions helped me learn more about the company’s workflow and also helped me facilitate design choices for the application. Our team used SVN for version control and Slack for communication.</p>
+				<p>Here at Gammon Construction Limited, I had the opportunity to work in a professional engineering company and experienced a fast paced and resourceful development process. It was also my first experience with agile methodologies and enterprise development. Overall, I learned a handful of valuable technologies and was able to pick the brains of senior developers to guide me forward.</p></div>)
 		}
 		else if(num === 3){
 			summary = (<div><p>- Managed and maintained client data for luxury condo development</p>
@@ -138,7 +136,7 @@ export default class ExpPage extends Component {
 		const role7 = 'McGill CodeJam - Hackathon';
 		const dura7 = 'November 2016';
 
-		const link1 = 'https://github.com/bendwilletts';
+		const link1 = 'https://github.com/bendwilletts/pophr-ui';
 		const link2 = 'https://www.gammonconstruction.com/en/html/front/index.html';
 		const link3 = 'http://tomcondos.com/en/';
 		const link4 = 'http://www.tigercublearning.com/en/';
@@ -161,19 +159,33 @@ export default class ExpPage extends Component {
 
 		return(
 			<div>
-{/*				<Header as='h2' icon textAlign='center' className='portfolio-header'>
+				<Header as='h2' icon textAlign='center' className='portfolio-header'>
 				<Divider horizontal>
 		  			<Icon name='comment alternate' circular />
 		  			<Header.Content>Endorsements</Header.Content>
 		  		</Divider>
 				</Header>
-				<Carousel autoplay vertical>
-				    <div><h3>1</h3></div>
-				    <div><h3>2</h3></div>
-				    <div><h3>3</h3></div>
-				    <div><h3>4</h3></div>
+				<Carousel vertical className='endorsements'>
+				    <div className="quote-text">
+				    	<h3>&#34;During his engagement with us, Ben demonstrated his self-initiation, diligence and commitment to work.&#34;</h3>
+				    	<div align="right" className="quote-author">
+				    		<p>- Horace Chu, Director &amp; CIO, Gammon Construction Limited</p>
+				    	</div>
+				    </div>
+				    <div className="quote-text">
+				    	<h3>&#34;Ben would add value to any company and I recommend him for any future endeavor he chooses to pursue.&#34;</h3>
+				    	<div align="right" className="quote-author">
+				    		<p>- Daniel Revah, President, TOM Condos</p>
+				    	</div>
+				    </div>
+				    <div className="quote-text">
+				    	<h3>&#34;Ben has proven himself a reliable and valuable member of the team who delivers on all expectations.&#34;</h3>
+				    	<div align="right" className="quote-author">
+				    		<p>- Horace Chu, Director &amp; CIO, Gammon Construction Limited</p>
+				    	</div>
+				    </div>
             	</Carousel>
-*/}				<Header as='h2' icon textAlign='center' className='portfolio-header'>
+				<Header as='h2' icon textAlign='center' className='portfolio-header'>
 				<Divider horizontal>
 		  			<Icon name='briefcase' circular />
 		  			<Header.Content>Work Experience</Header.Content>

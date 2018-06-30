@@ -32,6 +32,12 @@ export default class Footer extends Component {
 		          <Icon name='facebook' />
 		          Facebook
 		        </Menu.Item>
+		        </a>
+		        <a href='mailto:ben.d.willetts@gmail.com?Subject=Website%20Contact' target="_top">
+		        <Menu.Item name='email' onClick={this.handleItemClick}>
+		          <Icon name='mail' />
+		          E-mail
+		        </Menu.Item>
 		        </a>	        
 		      </Menu>
 		      <div className='copyright'>

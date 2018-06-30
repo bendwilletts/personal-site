@@ -33,9 +33,6 @@ export default class NavBar extends Component {
 	        	? <Menu.Item as={NavLink} to='/portfolio' name='portfolio' active={activeItem === 'portfolio'} onClick={(e) => e.preventDefault()} />
 	        	: <Menu.Item as={NavLink} to='/portfolio' name='portfolio' active={activeItem === 'portfolio'} onClick={this.handleItemClick} />
 	        }
-{/*	        <Menu.Item position='right' as={NavLink} exact to='/' name='home' active={activeItem === 'home'} onClick={(this.handleItemClick)} />
-	        <Menu.Item as={NavLink} to='/portfolio' name='portfolio' active={activeItem === 'portfolio'} onClick={this.handleItemClick} />*/}
-	        {/*<Menu.Item name='contact' active={activeItem === 'contact'} onClick={this.handleItemClick} />*/}
 	      </Menu>			
 		);
 	}

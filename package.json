@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "antd": "^3.6.3",
+    "antd": "^3.6.4",
     "lint": "^1.1.2",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
@@ -38,6 +38,9 @@
     "prettier": "^1.13.4"
   },
   "babel": {
-    "presets": [ "es2015", "react" ]
+    "presets": [
+      "es2015",
+      "react"
+    ]
   }
 }
