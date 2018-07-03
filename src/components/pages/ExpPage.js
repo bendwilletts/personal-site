@@ -140,7 +140,7 @@ export default class ExpPage extends Component {
 		const link2 = 'https://www.gammonconstruction.com/en/html/front/index.html';
 		const link3 = 'http://tomcondos.com/en/';
 		const link4 = 'http://www.tigercublearning.com/en/';
-		const link5 = 'https://github.com/bendwilletts';
+		const link5 = 'https://www.dropbox.com/s/ztwl76c7th5pvw7/dp1-g07-finalreport.pdf?dl=0';
 		const link6 = 'https://github.com/bendwilletts/WalksafeNYC';
 		const link7 = 'https://github.com/bendwilletts/RecommendAndChill';
 
